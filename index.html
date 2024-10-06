@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
+  <title>World of Souls</title>
+</head>
+
+<body>
+
+  <header>
+
+    <div id="titulo-principal">
+      <h1>World of Souls</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="#personagens.html">Personagens</a></li>
+        <li><a href="#soundtrack.html">Soundtrack</a></li>
+        <li><a href="#contato.html">Contato</a></li>
+      </ul>
+    </nav>
+
+  </header>
+<main>
+  <div id="titulo-secundario">
+    <h2>A chama quase se apagou: Explore um mundo à beira do abismo</h2>
+  </div>
+  <section>
+    <input type="text" placeholder="Digite o nome do jogo ou personagem da franquia" id = "campo-pesquisa">
+    <button onclick="pesquisar()">Pesquisar</button>
+</section>
+<section class="resultados-pesquisa" id = "resultados-pesquisa">
+</section>
+
+<div class="slider">
+
+  <div class="slides">
+
+    <input type="radio" name="radio-btn" id="radio1">
+    <input type="radio" name="radio-btn" id="radio2">
+    <input type="radio" name="radio-btn" id="radio3">
+
+      <div class="slide first">
+        <img src="https://c4.wallpaperflare.com/wallpaper/212/291/692/dark-souls-3-4k-desktop-wallpaper-preview.jpg" alt="game imagem 1">
+      </div>
+      <div class="slide">
+        <img src="https://cdn.mos.cms.futurecdn.net/5urniCwoxEDZ3DAb3an7LQ-1200-80.jpg" alt="game imagem 2">
+      </div>
+      <div class="slide">
+        <img src="https://i.guim.co.uk/img/media/3f198bf04a9896116f6a2c027930c14624d30a3c/0_0_3600_2160/master/3600.jpg?width=1200&quality=85&auto=format&fit=max&s=0ffc77e6c5daf323a750a7e03eca1482" alt="game imagem 3">
+      </div>
+
+      <div class="navigation-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+      </div>
+
+    </div>
+
+    <div class="manual-navigation">
+      <label for="radio1" class="manual-btn"></label>
+      <label for="radio2" class="manual-btn"></label>
+      <label for="radio3" class="manual-btn"></label>
+    </div>
+
+  </div>
+</main>
+
+  <footer>
+    <p>2024 &copy; World of Souls. Todos os direitos reservados.</p>
+    <p>Entre em contato: <a href="anab.rosa178@gmail.com">anab.rosa178@gmail.com</a></p>
+  </footer>
+
+  <script src="dados.js"></script> <script src="app.js"></script> 
+ </body>
+
+</html>

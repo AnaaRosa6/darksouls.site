@@ -1,0 +1,391 @@
+/* Importa a fonte  do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+/* Estiliza o corpo da página */
+body {
+    font-family: "Darker Grotesque", sans-serif; /* Define a fonte padrão */
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    height: 100vh; /* Preenche a altura total da viewport */
+    width: 100%;
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images6.alphacoders.com/600/thumb-1920-600924.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+    opacity: 0.8; /* Ajusta a opacidade aqui */
+    z-index: -1; /* Posiciona atrás do conteúdo */
+  }
+
+/* Estiliza os títulos h1 */
+h1 {
+    font-size: 6rem;
+    color:#ffffff; /* Branco para melhor contraste com fundo escuro */
+    text-align: center;
+    letter-spacing: 0.9rem;
+    font-family: 'Darker Grotesque', sans-serif; /* Uma fonte moderna e legível */
+    text-shadow: 5px 5px 5px rgb(0, 0, 0); /* Sombra para profundidade */
+    padding: 3.5rem 1rem; /* Espaçamento interno para melhor visualização */
+    border-radius: 15px; /* Bordas arredondadas para um visual mais suave */
+    margin-top: -8rem;
+    margin-bottom: -3rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+h2{
+    font-size: 2.3rem;
+    color:#020202ec;
+    text-align: center;
+    background-color: #ffffffad;
+    padding: 15px;
+    border-radius: 50px;
+    padding-top: 0.5rem;
+}
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  nav {
+    background-color: #222222e7;
+    padding: 1.5px;
+    border-radius: 50px;
+    padding-top: 0.2rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav li {
+    margin: 5 0.2px;
+    font-size: 19px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.781);
+    padding: 0px 15px;
+  }
+  
+  nav a:hover {
+    background-color: #ffffff36;
+    border-radius: 10px;
+  }
+
+
+
+.subtitulo {
+    color: rgb(255, 255, 255);
+  font-size: 19px;
+  text-shadow: 2px 2px 4px rgb(42, 63, 145);
+  text-align: center;
+    
+} 
+
+/*Slide*/
+.slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    margin-top: -490px;
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input {
+    display:none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 3s;
+}
+
+.slide img{
+    width: 800px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #FFF;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #020202;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+.navigation-auto div{
+    border: 2px solid #1b498f;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #000000;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #000000;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #000000;
+}
+
+section {
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: row; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin-bottom: 0rem; /* Espaçamento abaixo de cada seção */
+    justify-content: center;
+}
+
+/* Estiliza os inputs dentro das seções */
+section input {
+    width: 30rem; /* Largura dos inputs */
+    border: none; /* Remove a borda padrão */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 1.5rem; /* Borda arredondada */
+    margin-bottom: -1rem; /* Espaçamento abaixo dos inputs */
+    color: #45474B; /* Cor do texto */
+    font-size: 1rem; /* Tamanho da fonte */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    margin: 5px;
+}
+
+/* Estiliza os botões dentro das seções */
+section button {
+    padding: 0.9rem 1.2rem; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1.5rem; /* Borda arredondada */
+    background-color:#25415e; /* Cor de fundo do botão */
+    color: #F5F7F8; /* Cor do texto do botão */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Adiciona efeito hover ao botão de pesquisa */
+section button:hover {
+    background-color: #30475E; /* Muda a cor de fundo ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+}
+.container {
+    text-align: center;
+    margin:auto;
+  }
+
+  
+/* Estiliza a caixa de resultados da pesquisa */
+.resultados-pesquisa {
+    width: 50rem; /* Largura máxima da caixa de resultados */
+    height: 50vh; /* Altura máxima da caixa de resultados */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 0.6rem; /* Borda arredondada */
+    overflow: hidden;
+    gap: 2rem;
+}
+
+/* Estiliza cada item de resultado */
+.item-resultado {
+    background: rgba(255, 255, 255, 0.5); /* Cor de fundo dos itens */
+    border-radius: 1rem; /* Borda arredondada */
+    padding: 1rem; /* Espaçamento interno */
+    margin-bottom: 5rem; /* Espaçamento abaixo dos itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    overflow: hidden; /* Permite rolagem se necessário */
+    min-height: 390px; /* Altura mínima para garantir que o conteúdo não fique cortado */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura */
+}
+
+
+
+/* Estiliza os títulos dentro dos itens de resultado */
+.item-resultado h2 {
+    font-size: 1.5rem ; /* Tamanho da fonte */
+    color: #000000 ; /* Cor do texto */
+    font-family: sans-serif;
+}
+
+/* Estiliza os links dentro dos itens de resultado */
+.item-resultado a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #000000; /* Cor do texto dos links */
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}
+
+/* Estiliza os links quando são passados o mouse sobre */
+.item-resultado a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    font-family: sans-serif;
+    color: #002fff;
+}
+
+/* Estiliza a descrição meta dentro dos itens de resultado */
+.descricao-meta {
+    color: #000000; /* Cor do texto */
+    margin: 0.5rem 0; /* Margem acima e abaixo */
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.item-resultado img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3.5px solid #000000;
+  }
+
+.item-resultado img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estiliza o rodapé da página */
+footer {
+    background-color: #181616; /* Cor de fundo do rodapé */
+    color: #c2c2c2; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: -30px; /* Espaçamento interno */
+    width: 100%; /* Largura total da página */
+    position: absolute; /* Posiciona o rodapé */
+    bottom: 0; /* Alinha ao fundo da página */
+    font-size: 1rem; /* Tamanho da fonte */
+    border-top: 0px solid black; /* largura estilo cor */
+}
+
+.link-footer:visited{
+    color:white
+}
+
+.link-footer {
+    color: white; /* Cor do link normal */
+}
+
+.link-footer:hover {
+    color: white; /* Cor do link quando o mouse está sobre ele */
+}
+
+
+/* Confiurar a responsividade para tablets/mobile  */
+@media (max-width: 768px) { 
+    h1 {
+        font-size: 2rem; /* Tamanho da fonte em telas menores */
+        letter-spacing: 0.2rem; /* Espaçamento entre letras em telas menores */
+    }
+
+    section input {
+        width: 25rem; /* Largura dos inputs em telas menores */
+        padding: 0.8rem; /* Espaçamento interno em telas menores */
+    }
+
+    .resultados-pesquisa {
+        width: 40rem; /* Largura da caixa de resultados em telas menores */
+        height: 40vh; /* Altura da caixa de resultados em telas menores */
+    }
+
+    .item-resultado h2 {
+        font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.8rem; /* Tamanho da fonte em telas pequenas */
+        letter-spacing: 0.1rem; /* Espaçamento entre letras em telas pequenas */
+    }
+
+    section input {
+        width: 17rem; /* Largura total dos inputs em telas pequenas */
+    }
+
+    section button {
+        padding: 0.6rem 1rem; /* Espaçamento interno do botão em telas pequenas */
+        font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
+    }
+
+    .resultados-pesquisa {
+        width: 90%; /* Largura da caixa de resultados em telas pequenas */
+        height: 50vh; /* Altura da caixa de resultados em telas pequenas */
+    }
+
+    .item-resultado h2 {
+        font-size: 1.1rem; /* Tamanho da fonte dos títulos em telas pequenas */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Tamanho da fonte do rodapé em telas pequenas */
+    }
+}
